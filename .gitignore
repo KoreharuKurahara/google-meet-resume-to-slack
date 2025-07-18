@@ -1,0 +1,67 @@
+# 環境変数ファイル
+.env
+
+# ログファイル
+*.log
+
+# Python関連
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# 仮想環境
+venv/
+env/
+ENV/
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS固有
+.DS_Store
+Thumbs.db
+
+# Google認証情報
+*.json
+!.env.example
+
+# 機密ファイル
+credentials/
+secrets/
+keys/
+**/credentials.json
+**/service-account*.json
+
+# ダウンロードファイル
+downloads/*.md
+downloads/*.txt
+downloads/*.docx
+
+# 一時ファイル
+*.tmp
+*.temp
+.env.local
+.env.production
