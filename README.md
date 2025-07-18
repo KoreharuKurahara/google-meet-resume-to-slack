@@ -10,7 +10,50 @@ Google Meetの文字起こしを自動的に取得し、生成AIで要約した�
 - 📊 詳細なログ出力とエラーハンドリング
 - 🔧 環境変数による安全な設定管理
 
-## 🚀 セットアップ
+## 🚀 クイックスタート
+
+初回セットアップから実行まで：
+
+```bash
+# 1. リポジトリをクローン
+git clone https://github.com/KoreharuKurahara/google-meet-resume-to-slack.git
+cd google-meet-resume-to-slack
+
+# 2. 仮想環境を作成・アクティベート
+python -m venv venv
+source venv/bin/activate  # macOS/Linux
+# venv\Scripts\activate  # Windows
+
+# 3. 依存関係をインストール
+pip install --upgrade pip
+pip install -r requirements.txt
+
+# 4. 環境変数ファイルをコピー
+cp .env.example .env
+
+# 5. .envファイルを編集して実際のAPIキーを設定
+# エディタで .env ファイルを開いて、APIキーを設定してください
+
+# 6. テスト実行
+python main.py --test
+
+# 7. 本番実行
+python main.py
+```
+
+## 🚀 詳細セットアップ
+
+### 0. リポジトリのクローン
+
+まず、GitHubからリポジトリをクローンしてプロジェクトディレクトリに移動します：
+
+```bash
+# リポジトリをクローン
+git clone https://github.com/KoreharuKurahara/google-meet-resume-to-slack.git
+
+# プロジェクトディレクトリに移動
+cd google-meet-resume-to-slack
+```
 
 ### 1. 依存関係のインストール
 
@@ -96,6 +139,21 @@ Slackで以下の方法で取得できます：
 2. URLの最後の部分がチャンネルIDです
 ```
 https://app.slack.com/client/T1234567/[ここがチャンネルID]
+```
+
+### 6. セットアップ完了確認
+
+環境変数の設定が完了したら、以下のコマンドでセットアップが正しく行われているか確認できます：
+
+```bash
+# 環境変数の読み込みテスト
+python config.py
+
+# Slack接続テスト
+python slack_poster.py
+
+# 全体のテスト実行
+python main.py --test
 ```
 
 ## 🎯 使用方法
